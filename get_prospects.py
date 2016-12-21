@@ -28,7 +28,7 @@ def get_prospect(company, name, title, domain, role):
         print("List is empty")
     else:
         results = people.json()
-        for r in results:  # adding this if we get more than 1 persons
+        for r in results:  # adding this if we get more than 1 person
             contact = OrderedDict()
             contact['givenName'] = re.sub('[^a-zA-Z0-9-_*.]', '', r['name']['givenName'])
             contact['familyName'] = re.sub('[^a-zA-Z0-9-_*.]', '', r['name']['familyName'])
